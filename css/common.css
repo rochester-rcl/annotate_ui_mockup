@@ -1,0 +1,109 @@
+
+/* COLORS
+light text - #9da5b4
+dark text  - #4b5263
+
+gray bg    - #21252b
+light gray bg - #282c34
+
+
+*/
+
+
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,900';
+
+
+body{
+    background: #21252c;
+    color: white;
+    font-family: lato;
+}
+
+/* Overiding the color of the blue button */
+.ui.blue.button {
+    background-color: #29acff;
+}
+
+.ui.avatar.image {
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    height: 35px;
+    width: auto;
+}
+
+.mediate-icon-small{
+    height: 15px;
+    width: auto;
+}
+
+/* Header */
+.nav-container {
+    /*background: black;*/
+    width: 100%;
+    height: 50px;
+    position: relative;
+    /*padding: 5px 10px;*/
+}
+
+.nav-logo{
+    height: 35px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.nav-container .ui.top.right.pointing.dropdown.button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 0;
+    outline: none;
+}
+.nav-container .ui.top.right.pointing.dropdown.button:hover,
+.nav-container .ui.button:hover {
+    background: none;
+}
+
+.nav-container .ui.button {
+    background: none;
+}
+.nav-container .headshot {
+    height: 35px;
+    width: auto;
+    border-radius: 12px;
+}
+.nav-container .headshot:hover {
+    opacity: 0.8;
+}
+/*.nav-container .ui.simple.dropdown.item{
+    color: white;
+    float: right;
+}
+.nav-container .ui.inline.dropdown {
+    color: white;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    background: #21252b;
+    border-radius: 10px;
+}
+.nav-container .ui.avatar.image {
+    border-radius: 0;
+}
+.nav-container img.ui.avatar.image {
+    height: 26px;
+    margin-right: 0px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.nav-container .ui.inline.dropdown .menu {
+    left: -87px;
+    border-radius: 0 0 0 5px;
+    background: black;
+}
+.nav-container .ui.dropdown .menu > .item {
+    color: white;
+}
+.nav-container .ui.dropdown .menu > .item:hover{
+    background: #21252b;
+}*/

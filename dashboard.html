@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- Site Properties -->
+  <title>mediate - media annotation tool</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="semantic.css">
+  <link rel="stylesheet" type="text/css" href="css/master.css">
+  <!-- Scripts -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
+<script src="semantic.js"></script>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="nav-container">
+        <!-- Nav Logo -->
+        <img class="nav-logo" src="images/logo-icon.png">
+        <!-- User Menu -->
+          <!-- <div class="ui right inline dropdown">
+            <div class="text">
+              <img class="ui avatar image" src="images/headshot.jpg">
+            </div>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="item">
+                  <i class="fitted setting icon"></i>
+                Account
+              </div>
+              <div class="item">
+                  <i class="fitted talk icon"></i>
+                Report Issue
+              </div>
+              <div class="item">
+                  <i class="fitted sign out icon"></i>
+                Logout
+              </div>
+            </div> -->
+            <div class="ui top right pointing dropdown button">
+              <!-- <i class="wrench icon"></i> -->
+              <img src="images/headshot.jpg" class="headshot">
+              <div class="menu">
+                <!-- <div class="header">Display Density</div> -->
+                <div class="item">Account</div>
+                <div class="item">Feedback</div>
+                <div class="ui divider"></div>
+                <div class="item">Signout</div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <!-- END HEADER -->
+
+    <!-- Page Header -->
+    <div class="page-header-container">
+        <h1>Poetics in Film</h1>
+        <h6>University of Rochester</h6>
+    </div>
+    <!-- Video list -->
+    <div class="dash-video-list-container">
+        <div class="dash-video">
+            <img src="images/film-thumb-1.jpg" class="dash-video-image">
+            <div class="dash-video-title">It's a wonderful life</div>
+            <div class="dash-video-year">1946</div>
+            <div class="dash-video-collab-container">
+                <img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui avatar image">
+                <img src="images/headshot-2.jpg" data-title="Gregory Peck" data-content="Stevie has been a member since August 2013" class="ui avatar image">
+                <img src="images/headshot-3.jpg" data-title="Jane Fonda" data-content="Matt has been a member since July 2014" class="ui avatar image">
+            </div>
+            <div class="ui label">
+                <img src="images/logo-icon.png" class="mediate-icon-small">
+                340
+            </div>
+        </div>
+        <div class="dash-video">
+            <img src="images/film-thumb-2.jpg" class="dash-video-image">
+            <div class="dash-video-title">The Jungle Book</div>
+            <div class="dash-video-year">1942</div>
+            <div class="dash-video-collab-container">
+                <img src="images/headshot-2.jpg" data-title="Gregory Peck" data-content="Stevie has been a member since August 2013" class="ui avatar image">
+                <img src="images/headshot-3.jpg" data-title="Jane Fonda" data-content="Matt has been a member since July 2014" class="ui avatar image">
+            </div>
+            <div class="ui label">
+                <img src="images/logo-icon.png" class="mediate-icon-small">
+                340
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    $('.ui.dropdown')
+      .dropdown()
+    ;
+</script>
+<script type="text/javascript">
+    $('.ui.avatar')
+      .popup()
+    ;
+</script>
+
+</html>

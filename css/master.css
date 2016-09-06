@@ -1,0 +1,22 @@
+/* ----------------------------
+
+MASTER STYLESHEET
+-------------------------------
+This is the master stylesheet.
+It contains all styles for this
+sub-theme.
+-------------------------------*/
+
+/* TABLE OF CONTENTS */
+
+/* 1. COMMON - Global styles */
+@import url("common.css");
+
+/* 2. HOMEPAGE  */
+@import url("homepage.css");
+
+/* 3. DASHBOARD  */
+@import url("dashboard.css");
+
+/* 4. APP  */
+/*@import url("app.css");*/

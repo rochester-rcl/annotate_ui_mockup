@@ -1,0 +1,294 @@
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+body {
+
+}
+.app-marker-list-container{
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 50px;
+    bottom: 0;
+    width: 30%;
+    background: #272b34;
+}
+
+
+
+/* DEFAULT SCROLLBAR*/
+
+/* Let's get this party started */
+.app-marker-list-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+.app-marker-list-container::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    /*-webkit-border-radius: 10px;*/
+    /*border-radius: 10px;*/
+    background: black;
+}
+
+/* Handle */
+.app-marker-list-container::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*background: rgba(96,96,96,0.8);*/
+    background: rgba(115, 133, 159, 0.6);
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/
+}
+.app-marker-list-container::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(115, 133, 159, 0.3);
+}
+
+
+
+.app-marker-list-container ul{
+    padding: 0;
+    margin: 0 0 0 70px;
+}
+.app-marker-list-container ul .group{
+    padding: 0;
+    margin: 0;
+}
+.app-marker-list-container .marker {
+    position: relative;
+    min-height: 40px;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+
+.credits-marker {border-left-color: #9ee965;}
+.shot-marker    {border-left-color: #29acff;}
+.beat-marker    {border-left-color: #ffea00;}
+.scene-marker   {border-left-color: #f94a6f;}
+
+.marker.shot-marker{
+    padding: 0;
+    /*overflow: hidden;*/
+
+}
+
+.ui.multiple.dropdown {
+    background: #3e4452;
+    width: 100%;
+    padding: 10px;
+}
+
+.app-marker-list-container .ui.multiple.dropdown > .label{
+    padding: 10px 20px;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+    border-left: 3px solid;
+}
+.app-marker-list-container .ui.label > .delete.icon{
+    position: absolute;
+    right: 15px;
+}
+
+.app-marker-list-container  .ui.multiple.dropdown > a:first-of-type {
+    margin-top: 10px;
+
+}
+.app-marker-list-container  i.options.icon {
+    background: black;
+    padding: 5px 10px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+.red {
+    border: 3px solid red;
+    border-color: red!important;
+}
+
+.app-video-container{
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 30%;
+    width: 70%;
+}
+.marker-headshot .ui.headshot.avatar.image {
+    position: absolute;
+    right: 37px;
+    top: 10px;
+    height: 20px;
+    width: auto;
+    border-radius: 5px;
+    border: none;
+    }
+.marker-headshot .ui.headshot.avatar.image:hover {
+    opacity: 0.8;
+}
+
+.app-marker-list-container .marker-timecode {
+    position: absolute;
+    left: -74px;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    padding-top: 10px;
+    background: rgba(0,0,0,1);
+    width: 70px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(157, 165, 181, 1);
+}
+.app-marker-list-container .marker-timecode.group {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-left: 5px;
+}
+ul .group .marker-timecode {
+    display: none;
+}
+.group{
+    position: relative;
+}
+.app-marker-list-container .marker-type {
+    position: absolute;
+    left:15px;
+    top: 10px;
+    color: rgba(255, 255, 255, 1);
+}
+.app-marker-list-container .marker-timecode .marker-timecode-o{
+    color: rgba(157, 165, 181, 0.5);
+}
+
+.app-marker-list-container .marker-timecode-bar{
+    width: 5px;
+    background: rgb(69, 80, 95);
+    border-radius: 5px;
+    height: 30px;
+    position: absolute;
+    z-index: 5000;
+    left: -13px;
+    top: 27px;
+    height: 80%;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.app-marker-list-container .marker-shot-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.marker-note {
+    margin: 26px 19px 0 0;
+    color: #e8e1b8;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.shot-marker .marker-note {
+    margin: -66px 19px 10px 0;
+    color: #e8e1b8;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.marker-edit{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+.marker-edit .ui.icon.top.right.pointing.dropdown.button{
+    padding: 3px;
+}
+.no-markers{
+    display: none;
+    color: rgba(157, 165, 181, 1);
+    font-size: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.app-marker-list-container ul li:hover {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.marker-edit {
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+li:hover > .marker-edit {
+    opacity: 1;
+}
+.marker-timecode:hover + .marker.shot-marker{
+    cursor: pointer;
+    background-color: red!important;
+    color: blue!important;
+    border: 1px solid yellow;
+}
+
+
+
+
+
+
+
+
+
+/* VIDEO PLAYER  */
+.video-js{
+    font-size: 15px!important;
+}
+.vjs_video_3-dimensions{
+    width: 100%;
+    height: 513px;
+}
+.video-js .vjs-control-bar {
+    background-color: transparent!important;
+    position: relative!important;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(43,51,63,0.55) 100%);
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(43,51,63,0.55) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(43,51,63,0.55) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#8c2b333f',GradientType=0 );
+}
+
+
+.vjs-remaining-time.vjs-time-control.vjs-control {
+    position: absolute;
+    bottom: -67px;
+    left: 20px;
+    right: 20px;
+    background: black;
+    border-radius: 5px;
+}
+.vjs-remaining-time-display {
+    font-family: lato;
+    font-size: 28px;
+    font-weight: 300;
+    color: #999fa9;
+}
+.vjs-remaining-time {
+    position: absolute;
+}
+/* Mouse Hover*/
+.video-js .vjs-progress-control .vjs-mouse-display {
+    font-family: lato;
+    z-index: 500!important;
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+}
