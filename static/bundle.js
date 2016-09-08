@@ -93,7 +93,7 @@
 	  "fluid": true
 	};
 
-	_reactDom2.default.render(_react2.default.createElement(_videoContainer2.default, { fileUrl: '/Users/seanm/Box Sync/Default Sync Folder/mediate/media/demo.mp4', mime: 'video/webm', playerOptions: playerOptions, plugins: plugins }), // These props could also be received from a Redux store - just set the store up here
+	_reactDom2.default.render(_react2.default.createElement(_videoContainer2.default, { fileUrl: '/Users/seanm/Box Sync/Default Sync Folder/mediate/annotate_ui_mockup/media/demo.mp4', mime: 'video/webm', playerOptions: playerOptions, plugins: plugins }), // These props could also be received from a Redux store - just set the store up here
 	document.getElementById('test'));
 
 /***/ },

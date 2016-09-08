@@ -12,7 +12,7 @@ body {
     position: fixed;
     overflow-x: hidden;
     overflow-y: auto;
-    top: 50px;
+    top: 100px;
     bottom: 0;
     width: 30%;
     background: #272b34;
@@ -47,7 +47,13 @@ body {
 	background: rgba(115, 133, 159, 0.3);
 }
 
-
+.app-marker-list-container .ui.dropdown .menu > .header {
+    margin: 8px 0 0 0;
+    padding: 5px;
+    /* border: none; */
+    /*background: #21252c;*/
+    /*color: white;*/
+}
 
 .app-marker-list-container ul{
     padding: 0;
@@ -63,18 +69,41 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 5px;
-    border-left-style: solid;
-    border-left-width: 4px;
+    /*border-left-style: solid;
+    border-left-width: 4px;*/
     border-bottom: 1px solid rgba(0,0,0,0.4);
 }
+.app-marker-list-container .marker-filter-container .ui.dropdown .menu{
+    /*background: #45505f;*/
+    z-index: 50000000;
+    border-radius: 0 0 5px 5px!important;
+    /*border: 1px solid white;*/
+    margin-top: 0!important;
+    width: 80%;
 
-.credits-marker {border-left-color: #9ee965;}
+}
+/*.credits-marker {border-left-color: #9ee965;}
 .shot-marker    {border-left-color: #29acff;}
 .beat-marker    {border-left-color: #ffea00;}
-.scene-marker   {border-left-color: #f94a6f;}
+.scene-marker   {border-left-color: #f94a6f;}*/
+.credits-marker {background-color: #9ee965;}
+.shot-marker    {background-color: #29acff;}
+.beat-marker    {background-color: #ffea00;}
+.scene-marker   {background-color: #f94a6f;}
 
-.marker.shot-marker{
+.marker-color-bar {
+    width: 4px;
+    border-radius: 5px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    bottom: 4px;
+    /*background-color: #9ee965;*/
+}
+
+.marker.shot{
     padding: 0;
+    border: 0;
     /*overflow: hidden;*/
 
 }
@@ -138,7 +167,7 @@ body {
 
 .app-marker-list-container .marker-timecode {
     position: absolute;
-    left: -74px;
+    left: -70px;
     text-align: center;
     top: 0;
     bottom: 0;
@@ -153,7 +182,7 @@ body {
     display: block;
     position: absolute;
     bottom: 0;
-    margin-left: 5px;
+    /*margin-left: 5px;*/
 }
 ul .group .marker-timecode {
     display: none;
@@ -165,6 +194,7 @@ ul .group .marker-timecode {
     position: absolute;
     left:15px;
     top: 10px;
+    font-size: 15px;
     color: rgba(255, 255, 255, 1);
 }
 .app-marker-list-container .marker-timecode .marker-timecode-o{
@@ -187,11 +217,10 @@ ul .group .marker-timecode {
 .app-marker-list-container .marker-shot-image {
     width: 100%;
     height: auto;
-    margin: 0;
-    padding: 0;
+    margin-bottom: -4px;
 }
 .marker-note {
-    margin: 26px 19px 0 0;
+    margin: 26px 19px 0 10px;
     color: #e8e1b8;
     padding: 5px 10px;
     font-size: 14px;
@@ -205,10 +234,16 @@ ul .group .marker-timecode {
 .marker-edit{
     position: absolute;
     right: 5px;
-    top: 10px;
+    top: 8px;
 }
 .marker-edit .ui.icon.top.right.pointing.dropdown.button{
-    padding: 3px;
+    padding: 3px 1px;
+    background: black;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+.marker-edit .ui.icon.top.right.pointing.dropdown.button:hover{
+    border: 2px solid rgba(255,255,255,0.9);
 }
 .no-markers{
     display: none;
@@ -223,25 +258,79 @@ ul .group .marker-timecode {
     transform: translate(-50%, -50%);
 }
 
-
+.shortcut-keys {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #21252c;
+    color: white;
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin: 0 0 0 5px;
+}
+.marker-filter-container .shortcut-keys {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 18px;
+    margin: auto;
+    right: 8px;
+    color: #6a717c;
+}
+.scrolling.menu .shortcut-keys{
+    color: white;
+    background: gray;
+}
+.marker-filter-container i.filter.icon {
+    margin-left: -53px!important;
+    color: #9da5b5;
+}
+.marker-filter-container .text {
+    margin-left: -41px;
+}
 .app-marker-list-container ul li:hover {
     background: rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
-.marker-edit {
+.app-marker-list-container .ui.dropdown .menu > .input{
+    margin: 0;
+}
+.marker-filter-container .ui.input input{
+    border: none;
+}
+.marker-filter-container {
+    background: #171a1f;
+    padding: 5px;
+    position: fixed;
+    z-index: 500;
+    width: 30%;
+    top: 50px;
+    height: 50px;
+}
+.app-marker-list-container .ui.floating.dropdown.labeled.icon.button {
+    width: calc(100% - 80px);
+    position: relative;
+    right: 9px;
+    margin: 0 0 0 74px;
+}
+.marker-edit,
+.marker-headshot {
     transition: all 0.2s ease;
     opacity: 0;
 }
-li:hover > .marker-edit {
+li:hover > .marker-edit,
+li:hover > .marker-headshot {
     opacity: 1;
 }
-.marker-timecode:hover + .marker.shot-marker{
+/*.marker-timecode:hover + .marker.shot-marker,
+.marker-timecode:hover + .marker.shot-marker {
     cursor: pointer;
     background-color: red!important;
     color: blue!important;
     border: 1px solid yellow;
-}
+}*/
 
 
 

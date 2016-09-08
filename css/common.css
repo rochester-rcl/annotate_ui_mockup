@@ -44,7 +44,15 @@ body{
     position: relative;
     /*padding: 5px 10px;*/
 }
-
+.app-page .nav-container {
+    position: absolute;
+    right: 0;
+    width: 70%;
+}
+.ui.floating.dropdown.labeled.icon.button {
+    color: white;
+    background: #272b34;
+}
 .nav-logo{
     height: 35px;
     position: absolute;

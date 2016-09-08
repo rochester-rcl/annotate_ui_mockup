@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body class="app-page">
     <!-- HEADER 2-->
     <div class="nav-container">
         <!-- Nav Logo -->
@@ -46,60 +46,67 @@
     <!-- List -->
     <div class="app-marker-list-container">
         <!-- Filter -->
-        <!-- <div class="ui multiple dropdown">
-              <input type="hidden" name="filters">
-              <i class="options icon"></i>
-              <span class="text">Filter Posts</span>
-              <div class="menu">
-                <div class="ui icon search input">
-                  <i class="search icon"></i>
-                  <input type="text" placeholder="Search tags...">
-                </div>
+        <div class="marker-filter-container">
+        <div class="ui floating dropdown labeled icon button">
+          <span class="text">Filter by...<span class="text shortcut-keys">⌘ + C</span></span>
+          <i class="filter icon"></i>
+          <div class="menu">
+            <div class="ui icon search input">
+              <i class="search icon"></i>
+              <input type="text" placeholder="Search tags...">
+            </div>
+            <div class="scrolling menu">
+                <!-- Act -->
+               <div class="header">Act</div>
                 <div class="divider"></div>
-                <div class="header">
-                  <i class="tags icon"></i>
-                  Marker
-                </div>
-                <div class="scrolling menu">
-                  <div class="item" data-value="important">
-                    <div class="ui red empty circular label"></div>
-                    Shots
-                  </div>
-                  <div class="item" data-value="announcement">
-                    <div class="ui blue empty circular label"></div>
-                    Scenes
-                  </div>
-                  <div class="item" data-value="cannotfix">
-                    <div class="ui black empty circular label"></div>
-                    Music
-                  </div>
-                  <div class="item" data-value="news">
-                    <div class="ui purple empty circular label"></div>
-                    News
-                  </div>
-                  <div class="item" data-value="enhancement">
-                    <div class="ui orange empty circular label"></div>
-                    Enhancement
-                  </div>
-                  <div class="item" data-value="off-topic">
-                    <div class="ui yellow empty circular label"></div>
-                    Off Topic
-                  </div>
-                  <div class="item" data-value="interesting">
-                    <div class="ui pink empty circular label"></div>
-                    Interesting
-                  </div>
-                  <div class="item" data-value="discussion">
-                    <div class="ui green empty circular label"></div>
-                    Discussion
-                  </div>
-                </div>
+              <div class="item">
+                <div class="marker-color-bar shot-marker"></div>
+                Act 1: Begins<span class="text shortcut-keys">Ctrl+C</span>
               </div>
-            </div> -->
+              <div class="item">
+                <div class="marker-color-bar shot-marker"></div>
+                Act 1: Ends
+              </div>
+              <div class="item">
+                <div class="marker-color-bar shot-marker"></div>
+                Act 2: Begins
+              </div>
+              <!-- Act -->
+            <div class="header">Transition</div>
+            <div class="divider"></div>
+              <div class="item">
+                  <div class="marker-color-bar shot-marker"></div>
+                News
+              </div>
+              <div class="item">
+                  <div class="marker-color-bar shot-marker"></div>
+                Enhancement
+              </div>
+              <div class="item">
+                  <div class="marker-color-bar shot-marker"></div>
+                Change Declined
+              </div>
+              <div class="item">
+                  <div class="marker-color-bar shot-marker"></div>
+                Off Topic
+              </div>
+              <div class="item">
+                  <div class="marker-color-bar shot-marker"></div>
+                Interesting
+              </div>
+              <div class="item">
+                <div class="ui green empty circular label"></div>
+                Discussion
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
         <!-- Markers  -->
         <ul>
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar credits-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-type">Credits: Opening</span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
@@ -113,11 +120,12 @@
                     </div>
                 </span>
             </li>
-            <li class="marker shot-marker">
+            <li class="marker shot">
                 <img src="images/shot-1.jpg" class="marker-shot-image">
                 <div class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></div>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:0</span>1:52:32</span>
                 <span class="marker-type">Shot</span>
+                <div class="marker-color-bar shot-marker"></div>
                 <span class="marker-edit">
                     <div class="ui icon top right pointing dropdown button">
                       <i class="chevron down icon"></i>
@@ -128,10 +136,11 @@
                     </div>
                 </span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <div class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></div>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <div class="marker-type">Credits: Opening</div>
+                <div class="marker-color-bar credits-marker"></div>
                 <span class="marker-edit">
                     <div class="ui icon top right pointing dropdown button">
                       <i class="chevron down icon"></i>
@@ -143,14 +152,15 @@
                 </span>
                 <div class="marker-note">
                     <span class="marker-note-details">
-                    <span class="marker-note-name">Marlon Brando</span> Bacon ipsum dolor amet porchetta capicola prosciutto ham alcatra jowl tri-tip turducken leberkas cow. Beef ribs chicken bacon boudin, cupim tenderloin ham hock cow frankfurter kielbasa sausage corned beef.
+                        <i class="quote left icon"></i><span class="marker-note-name">Marlon Brando</span> Bacon ipsum dolor amet porchetta capicola prosciutto ham alcatra jowl tri-tip turducken leberkas cow. Beef ribs chicken bacon boudin, cupim tenderloin ham hock cow frankfurter kielbasa sausage corned beef.
                     </span>
                 </div>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
-                <span class="marker-type">Credits: Opening</span>
+                <span class="marker-type">Scene Transition: Spatial</span>
+                <div class="marker-color-bar scene-marker"></div>
             </li>
 
             <!-- Same time-code example  -->
@@ -159,8 +169,8 @@
                     <span class="marker-timecode-o">0:00:0</span>2:22
                 </div>
                 <div class="marker-timecode-bar"></div>
-
-                <li class="marker shot-marker">
+                <li class="marker">
+                    <div class="marker-color-bar shot-marker"></div>
                     <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                     <span class="marker-type">Credits: Opening</span>
                     <span class="marker-edit">
@@ -173,21 +183,8 @@
                         </div>
                     </span>
                 </li>
-                <li class="marker shot-marker">
-                    <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
-                    <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
-                    <span class="marker-type">Credits: Opening</span>
-                    <span class="marker-edit">
-                        <div class="ui icon top right pointing dropdown button">
-                          <i class="chevron down icon"></i>
-                          <div class="menu">
-                            <div class="item"><i class="sticky note icon"></i>Add Note</div>
-                            <div class="item"><i class="remove icon"></i>Remove</div>
-                          </div>
-                        </div>
-                    </span>
-                </li>
-                <li class="marker scene-marker">
+                <li class="marker">
+                    <div class="marker-color-bar beat-marker"></div>
                     <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                     <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                     <span class="marker-type">Credits: Opening</span>
@@ -201,7 +198,23 @@
                         </div>
                     </span>
                 </li>
-                <li class="marker credits-marker">
+                <li class="marker">
+                    <div class="marker-color-bar shot-marker"></div>
+                    <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
+                    <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
+                    <span class="marker-type">Credits: Opening</span>
+                    <span class="marker-edit">
+                        <div class="ui icon top right pointing dropdown button">
+                          <i class="chevron down icon"></i>
+                          <div class="menu">
+                            <div class="item"><i class="sticky note icon"></i>Add Note</div>
+                            <div class="item"><i class="remove icon"></i>Remove</div>
+                          </div>
+                        </div>
+                    </span>
+                </li>
+                <li class="marker">
+                    <div class="marker-color-bar shot-marker"></div>
                     <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                     <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                     <span class="marker-type">Credits: Opening</span>
@@ -219,29 +232,33 @@
             <!-- Example end -->
 
             <!-- Filler -->
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar beat-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker scene-marker">
+            <li class="marker">
+                <div class="marker-color-bar shot-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar shot-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker shot-marker">
+            <li class="marker shot">
+                <div class="marker-color-bar shot-marker"></div>
                 <img src="images/shot-1.jpg" class="marker-shot-image">
                 <div class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></div>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:0</span>1:52:32</span>
                 <span class="marker-type">Shot</span>
                 <div class="marker-note">
                     <span class="marker-note-details">
-                    <span class="marker-note-name">Marlon Brando</span> Bacon ipsum dolor amet porchetta capicola prosciutto ham alcatra jowl tri-tip turducken leberkas cow. Beef ribs chicken bacon boudin, cupim tenderloin ham hock cow frankfurter kielbasa sausage corned beef.
+                        <i class="quote left icon"></i><span class="marker-note-name">Marlon Brando</span> Bacon ipsum dolor amet porchetta capicola prosciutto ham alcatra jowl tri-tip turducken leberkas cow. Beef ribs chicken bacon boudin, cupim tenderloin ham hock cow frankfurter kielbasa sausage corned beef.
                     </span>
                 </div>
                 <span class="marker-edit">
@@ -254,87 +271,94 @@
                     </div>
                 </span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar beat-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar shot-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar shot-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar beat-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar shot-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar beat-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
+                <div class="marker-color-bar shot-marker"></div>
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
             </li>
-            <li class="marker credits-marker">
+            <li class="marker">
                 <span class="marker-headshot"><img src="images/headshot.jpg" data-title="Marlon Brando" data-content="Elliot has been a member since July 2012" class="ui headshot avatar image"></span>
                 <span class="marker-timecode"><span class="marker-timecode-o">0:00:0</span>2:22</span>
                 <span class="marker-type">Credits: Opening</span>
