@@ -306,7 +306,7 @@ ul .group .marker-timecode {
     position: fixed;
     z-index: 500;
     width: 30%;
-    top: 50px;
+    top: 0;
     height: 50px;
 }
 .app-marker-list-container .ui.floating.dropdown.labeled.icon.button {
@@ -359,11 +359,17 @@ li:hover > .marker-headshot {
 
 
 .vjs-remaining-time.vjs-time-control.vjs-control {
-    position: absolute;
+    /*position: absolute;
     bottom: -67px;
     left: 20px;
     right: 20px;
     background: black;
+    border-radius: 5px;*/
+    position: fixed;
+    left: 0;
+    top: 50px;
+    height: auto;
+    width: 30%;
     border-radius: 5px;
 }
 .vjs-remaining-time-display {
