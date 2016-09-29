@@ -315,6 +315,12 @@ ul .group .marker-timecode {
     right: 9px;
     margin: 0 0 0 74px;
 }
+.app-marker-list-container .ui.fluid.multiple.search.selection.dropdown {
+    width: calc(100% - 80px);
+    position: relative;
+    right: 9px;
+    margin: 0 0 0 74px;
+}
 .marker-edit,
 .marker-headshot {
     transition: all 0.2s ease;
