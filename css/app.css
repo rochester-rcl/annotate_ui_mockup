@@ -12,7 +12,7 @@ body {
     position: fixed;
     overflow-x: hidden;
     overflow-y: auto;
-    top: 100px;
+    top: 50px;
     bottom: 0;
     width: 30%;
     background: #272b34;
@@ -80,7 +80,12 @@ body {
     /*border: 1px solid white;*/
     margin-top: 0!important;
     width: 80%;
+}
 
+.app-marker-list-container .marker-filter-container .ui.fluid.dropdown > .dropdown.icon {
+    float: right;
+    color: white;
+    font-size: 13px;
 }
 /*.credits-marker {border-left-color: #9ee965;}
 .shot-marker    {border-left-color: #29acff;}
@@ -111,7 +116,6 @@ body {
 .ui.multiple.dropdown {
     background: #3e4452;
     width: 100%;
-    padding: 10px;
 }
 
 .app-marker-list-container .ui.multiple.dropdown > .label{
@@ -120,8 +124,8 @@ body {
     box-shadow: none;
     position: relative;
     width: 100%;
-    border-radius: 0 5px 5px 0;
-    border-left: 3px solid;
+    border-radius: 5px;
+    /*border-left: 3px solid;*/
 }
 .app-marker-list-container .ui.label > .delete.icon{
     position: absolute;
@@ -303,11 +307,17 @@ ul .group .marker-timecode {
 .marker-filter-container {
     background: #171a1f;
     padding: 5px;
-    position: fixed;
+    /* position: fixed; */
     z-index: 500;
-    width: 30%;
+    /* width: 30%; */
     top: 0;
-    height: 50px;
+    left: 0;
+    /*border: 1px solid;*/
+    /*height: 50px;*/
+}
+.marker-filter-container a.ui.label.transition.visible {
+    background: black;
+    color: white;
 }
 .app-marker-list-container .ui.floating.dropdown.labeled.icon.button {
     width: calc(100% - 80px);
@@ -316,10 +326,10 @@ ul .group .marker-timecode {
     margin: 0 0 0 74px;
 }
 .app-marker-list-container .ui.fluid.multiple.search.selection.dropdown {
-    width: calc(100% - 80px);
+    /*width: calc(100% - 80px);*/
     position: relative;
-    right: 9px;
-    margin: 0 0 0 74px;
+    left: 0;
+    /*margin: 0 0 0 74px;*/
 }
 .marker-edit,
 .marker-headshot {
@@ -371,11 +381,11 @@ li:hover > .marker-headshot {
     right: 20px;
     background: black;
     border-radius: 5px;*/
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 50px;
     height: auto;
-    width: 30%;
+    width: 100%;
     border-radius: 5px;
 }
 .vjs-remaining-time-display {

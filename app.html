@@ -47,7 +47,46 @@
     <div class="app-marker-list-container">
         <!-- Filter -->
         <div class="marker-filter-container">
-        <div class="ui floating dropdown labeled icon button">
+
+            <div class="ui fluid multiple search selection dropdown">
+              <select type="hidden" multiple=""><option value="English">Shot</option><option value="French">French</option><option value="Spanish">Spanish</option><option value="German">German</option><option value="Chinese">Chinese</option>
+                </select>
+              <input value="" class="search" name="-search" autocomplete="off" tabindex="0">
+              <span class="sizer"></span>
+              <div class="default text">Filter</div>
+              <i class="dropdown icon"></i>
+              <div class="menu transition">
+                <div class="selected item" style="pointer-events: all;">
+                    <div class="marker-color-bar credits-marker"></div>
+                  <!-- react-text: 3271 -->Shot
+                  <!-- /react-text -->
+                </div>
+                <div class="item" style="pointer-events: all;">
+                    <div class="marker-color-bar credits-marker"></div>
+                  <!-- react-text: 3273 -->French
+                  <!-- /react-text -->
+                </div>
+                <div class="item" style="pointer-events: all;">
+                    <div class="marker-color-bar credits-marker"></div>
+                  <!-- react-text: 3275 -->Spanish
+                  <!-- /react-text -->
+                </div>
+                <div class="item" style="pointer-events: all;">
+                    <div class="marker-color-bar shot-marker"></div>
+
+                  <!-- react-text: 3277 -->German
+                  <!-- /react-text -->
+                </div>
+                <div class="item" style="pointer-events: all;">
+                    <div class="marker-color-bar credits-marker"></div>
+                  <!-- react-text: 3279 -->Chinese
+                  <!-- /react-text -->
+                </div>
+              </div>
+            </div>
+
+
+        <!-- <div class="ui floating dropdown labeled icon button">
           <span class="text">Filter by...<span class="text shortcut-keys">⌘ + C</span></span>
           <i class="filter icon"></i>
           <div class="menu">
@@ -56,7 +95,6 @@
               <input type="text" placeholder="Search tags...">
             </div>
             <div class="scrolling menu">
-                <!-- Act -->
                <div class="header">Act</div>
                 <div class="divider"></div>
               <div class="item">
@@ -71,7 +109,6 @@
                 <div class="marker-color-bar shot-marker"></div>
                 Act 2: Begins
               </div>
-              <!-- Act -->
             <div class="header">Transition</div>
             <div class="divider"></div>
               <div class="item">
@@ -100,7 +137,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
     </div>
 
         <!-- Markers  -->

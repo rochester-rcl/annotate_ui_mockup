@@ -19,4 +19,7 @@ sub-theme.
 @import url("dashboard.css");
 
 /* 4. APP  */
-/*@import url("app.css");*/
+/*Commented this out.
+This has HTML/BODY speicfic styles that
+should only effect the video app pages.*/
+/*@import url("app.css");
