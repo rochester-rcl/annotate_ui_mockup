@@ -131,12 +131,21 @@ body {
     position: absolute;
     right: 15px;
 }
-/*.app-marker-list-container .ui.fluid.search.selection.dropdown {
-    width: 30%;
+.app-marker-list-container .ui.fluid.search.selection.dropdown {
+    width: calc(30% - 22px);
     position: fixed;
     top: 5px;
     left: 5px;
-}*/
+    background: #29acff;
+    color: white;
+    z-index: 20;
+
+}
+.app-marker-list-container .marker-filter-container .ui.fluid.multiple.search.selection.dropdown{
+    width: 100%;
+    position: static;
+    background: #45505f;
+}
 .app-marker-list-container  .ui.multiple.dropdown > a:first-of-type {
     margin-top: 10px;
 
@@ -319,6 +328,8 @@ ul .group .marker-timecode {
     left: 0;
     /*border: 1px solid;*/
     /*height: 50px;*/
+    position: relative;
+    z-index: 10;
 }
 .marker-filter-container a.ui.label.transition.visible {
     background: black;
